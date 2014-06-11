@@ -19,6 +19,8 @@
 		7158104A1948F572006ECE83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 715810321948F572006ECE83 /* UIKit.framework */; };
 		715810521948F572006ECE83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 715810501948F572006ECE83 /* InfoPlist.strings */; };
 		715810541948F572006ECE83 /* FootballTeamsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 715810531948F572006ECE83 /* FootballTeamsTests.m */; };
+		7158105F1948F585006ECE83 /* FTFootballViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7158105E1948F585006ECE83 /* FTFootballViewController.m */; };
+		715810621948F596006ECE83 /* FTFootballCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 715810611948F596006ECE83 /* FTFootballCollectionViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		7158104F1948F572006ECE83 /* FootballTeamsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FootballTeamsTests-Info.plist"; sourceTree = "<group>"; };
 		715810511948F572006ECE83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		715810531948F572006ECE83 /* FootballTeamsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootballTeamsTests.m; sourceTree = "<group>"; };
+		7158105D1948F585006ECE83 /* FTFootballViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTFootballViewController.h; sourceTree = "<group>"; };
+		7158105E1948F585006ECE83 /* FTFootballViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTFootballViewController.m; sourceTree = "<group>"; };
+		715810601948F596006ECE83 /* FTFootballCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTFootballCollectionViewDataSource.h; sourceTree = "<group>"; };
+		715810611948F596006ECE83 /* FTFootballCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTFootballCollectionViewDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,10 @@
 			children = (
 				7158103D1948F572006ECE83 /* FTAppDelegate.h */,
 				7158103E1948F572006ECE83 /* FTAppDelegate.m */,
+				7158105D1948F585006ECE83 /* FTFootballViewController.h */,
+				7158105E1948F585006ECE83 /* FTFootballViewController.m */,
+				715810601948F596006ECE83 /* FTFootballCollectionViewDataSource.h */,
+				715810611948F596006ECE83 /* FTFootballCollectionViewDataSource.m */,
 				715810401948F572006ECE83 /* Images.xcassets */,
 				715810351948F572006ECE83 /* Supporting Files */,
 			);
@@ -240,7 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7158105F1948F585006ECE83 /* FTFootballViewController.m in Sources */,
 				7158103F1948F572006ECE83 /* FTAppDelegate.m in Sources */,
+				715810621948F596006ECE83 /* FTFootballCollectionViewDataSource.m in Sources */,
 				7158103B1948F572006ECE83 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
