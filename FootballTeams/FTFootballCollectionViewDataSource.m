@@ -23,7 +23,7 @@ static NSString * const BallCellIdentifier = @"BallCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:BallCellIdentifier forIndexPath:indexPath];
 
-    UIImageView *cellImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%d", indexPath.row + 1]]];
+    UIImageView *cellImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%ld", indexPath.row + 1]]];
     [cell addSubview:cellImage];
     
     return cell;
@@ -31,7 +31,7 @@ static NSString * const BallCellIdentifier = @"BallCell";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIImage *image = [UIImage imageNamed:@"1"];
+    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld", indexPath.row + 1]];
     return CGSizeMake(image.size.width, image.size.height);
 }
 
