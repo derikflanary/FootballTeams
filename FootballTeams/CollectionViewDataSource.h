@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface CollectionViewDataSource : NSObject
-
+- (void)registerCollectionView:(UICollectionView *)collectionView;
 @end

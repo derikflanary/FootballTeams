@@ -6,9 +6,13 @@
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
+#import "CollectionViewDataSource.h"
 #import "FTViewController.h"
 
-@interface FTViewController ()
+@interface FTViewController () <UICollectionViewDelegate>
+
+@property (nonatomic, strong)UICollectionView *collectionView;
+@property (nonatomic, strong)CollectionViewDataSource *dataSource;
 
 @end
 
@@ -16,6 +20,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+    self.collectionView = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:layout];
+    self.collectionView.backgroundColor = [UIColor cyanColor];
+    self.dataSource = [CollectionViewDataSource new];
+    [self.dataSource registerCollectionView:self.collectionView];
+    [self.collectionView setDataSource:self.dataSource];
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
+    
+    [self.view addSubview:self.collectionView];
     // Do any additional setup after loading the view.
 }
 
