@@ -22,14 +22,28 @@
     [super viewDidLoad];
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     self.collectionView = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:layout];
-    self.collectionView.backgroundColor = [UIColor cyanColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     self.dataSource = [CollectionViewDataSource new];
     [self.dataSource registerCollectionView:self.collectionView];
     [self.collectionView setDataSource:self.dataSource];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
+    //self.collectionView.allowsSelection = YES;
     
+    
+    layout.itemSize = CGSizeMake(300, 300);
+    [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    //layout.minimumInteritemSpacing = 50;
+    layout.sectionInset = UIEdgeInsetsMake(100, 100, 100, 100);
     [self.view addSubview:self.collectionView];
     // Do any additional setup after loading the view.
+}
+
+-(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+    
+}
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [self.collectionView cellForItemAtIndexPath:indexPath].alpha = .5;
 }
 
 - (void)didReceiveMemoryWarning {

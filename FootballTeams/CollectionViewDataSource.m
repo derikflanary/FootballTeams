@@ -22,7 +22,7 @@ static NSString *const ballCellIdentifier = @"BallCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 5;
+    return 15;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -33,6 +33,13 @@ static NSString *const ballCellIdentifier = @"BallCell";
     return cell;
     
 }
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld", indexPath.row + 1]];
+    return CGSizeMake(image.size.width*2, image.size.height*2);
+    
+}
+
 
 
 @end
